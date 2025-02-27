@@ -77,3 +77,22 @@ npm install devextreme devextreme-angular
     (...)
 </body>
 ```
+
+## Diagram do DevExtreme
+
+### Instalação
+
+```bash
+npm install devexpress-diagram
+```
+
+### Configuração
+
+angular.json
+
+```json
+"styles": [
+    "node_modules/devexpress-diagram/dist/dx-diagram.min.css",
+    "src/styles.scss"
+],
+```

@@ -34,7 +34,10 @@
                                 "output": "./assets/monaco/"
                             }
                         ],
-                        "styles": ["src/styles.scss"],
+                        "styles": [
+                            "node_modules/devexpress-diagram/dist/dx-diagram.min.css",
+                            "src/styles.scss"
+                        ],
                         "scripts": []
                     },
                     "configurations": {

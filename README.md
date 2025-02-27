@@ -1,6 +1,6 @@
 # Console
 
-Prova de conceito para testar integração do Angular 19 com Monaco Editor
+Prova de conceito para testar integração do Angular 19 com Monaco Editor & DevExtreme
 
 ## Monaco Editor
 
@@ -52,4 +52,28 @@ export const monacoConfig: NgxMonacoEditorConfig = {
 bootstrapApplication(AppComponent, {
     providers: [...appConfig.providers, importProvidersFrom(MonacoEditorModule.forRoot(monacoConfig))],
 }).catch((err) => console.error(err));
+```
+
+## DevExtreme
+
+### Instalação
+
+```bash
+npm install devextreme devextreme-angular
+```
+
+### Configuração
+
+1. styles.scss
+
+```scss
+@use 'devextreme/scss/bundles/dx.fluent.saas.light.scss';
+```
+
+2. index.html
+
+```html
+<body class="dx-viewport">
+    (...)
+</body>
 ```

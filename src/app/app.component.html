@@ -2,14 +2,21 @@
     [options]="editorOptions"
     [(ngModel)]="code"
     style="height: 400px; width: 100%"
+    class="mt-16"
 ></ngx-monaco-editor>
 
-<dx-button text="Test" (onClick)="test()" type="default"> </dx-button>
+<dx-button
+    text="Test"
+    (onClick)="test()"
+    type="default"
+    class="mt-16"
+></dx-button>
 
 <dx-diagram
     [simpleView]="true"
     pageOrientation="landscape"
     autoZoomMode="fitContent"
+    class="mt-16"
 >
     <dxo-toolbox visibility="disabled"></dxo-toolbox>
     <dxo-nodes
@@ -18,6 +25,7 @@
         parentKeyExpr="parentId"
         textExpr="title"
         typeExpr="type"
+        imageUrlExpr="imageUrl"
     >
         <dxo-auto-layout type="tree"></dxo-auto-layout>
     </dxo-nodes>

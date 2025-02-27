@@ -3,6 +3,6 @@ export type Task = {
     parentId: number | null;
     title: string;
     description: string;
-    type?: string;
+    type: string;
     imageUrl?: string;
 };

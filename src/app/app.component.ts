@@ -25,10 +25,7 @@ export class AppComponent implements OnInit {
     service = inject(TaskService);
 
     ngOnInit(): void {
-        this.tasks = this.service.get().map((task) => ({
-            ...task,
-            type: 'ellipse',
-        }));
+        this.tasks = this.service.get();
 
         this.dataSource = new ArrayStore({
             data: this.tasks,

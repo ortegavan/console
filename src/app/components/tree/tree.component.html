@@ -1,0 +1,68 @@
+<section class="mt-16 flex space-between gap-8 w-full">
+    <dx-sortable
+        class="w-full"
+        [filter]="'.step'"
+        [group]="'shared'"
+        [data]="steps"
+        [allowDropInsideItem]="false"
+        [moveItemOnDrop]="false"
+        (onDragStart)="start($event)"
+    >
+        <div class="flex steps gap-8 w-full">
+            @for (item of steps; track item.id) {
+                <div class="step">
+                    {{ item.title }}
+                </div>
+            }
+        </div>
+    </dx-sortable>
+
+    <dx-sortable
+        class="w-full"
+        [filter]="'.task'"
+        [group]="'shared'"
+        [data]="tasks"
+        [allowDropInsideItem]="true"
+        [moveItemOnDrop]="false"
+        (onAdd)="add($event)"
+    >
+        <div>
+            <dx-tree-view
+                #treeView
+                [dataSource]="tasks"
+                dataStructure="plain"
+                keyExpr="id"
+                displayExpr="title"
+                parentIdExpr="parentId"
+                itemTemplate="itemTemplate"
+                selectionMode="single"
+                [selectByClick]="true"
+                (onItemSelectionChanged)="select($event)"
+            >
+                <div
+                    *dxTemplate="let task of 'itemTemplate'"
+                    class="task flex space-between"
+                    [attr.data-id]="task.id"
+                >
+                    <div>{{ task.title }}</div>
+                    @if (task.id == selectedNodeId) {
+                        <div class="flex gap-8">
+                            <button
+                                class="btn btn-primary btn-sm"
+                                (click)="editTask(task)"
+                            >
+                                Edit
+                            </button>
+                            <button
+                                class="btn btn-danger btn-sm"
+                                (click)="deleteTask(task)"
+                            >
+                                Delete
+                            </button>
+                        </div>
+                    }
+                </div>
+            </dx-tree-view>
+        </div>
+    </dx-sortable>
+</section>

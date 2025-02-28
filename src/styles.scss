@@ -1,5 +1,21 @@
 @use "devextreme/scss/bundles/dx.fluent.saas.light.scss";
 
+.w-full {
+    width: 100% !important;
+}
+
+.flex {
+    display: flex;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.gap-8 {
+    gap: 8px;
+}
+
 .mt-16 {
     margin-top: 16px;
 }

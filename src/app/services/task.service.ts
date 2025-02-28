@@ -14,6 +14,7 @@ export class TaskService {
                 description: 'Description 1',
                 type: 'cardWithImageOnLeft',
                 imageUrl: 'img/agenda.svg',
+                steps: [],
             },
             {
                 id: 2,
@@ -22,6 +23,7 @@ export class TaskService {
                 description: 'Description 2',
                 type: 'cardWithImageOnLeft',
                 imageUrl: 'img/pin-code.svg',
+                steps: [],
             },
             {
                 id: 3,
@@ -30,6 +32,7 @@ export class TaskService {
                 description: 'Description 3',
                 type: 'cardWithImageOnLeft',
                 imageUrl: 'img/gears.svg',
+                steps: [],
             },
             {
                 id: 4,
@@ -38,6 +41,7 @@ export class TaskService {
                 description: 'Description 4',
                 type: 'cardWithImageOnLeft',
                 imageUrl: 'img/leadership.svg',
+                steps: [],
             },
             {
                 id: 5,
@@ -46,6 +50,7 @@ export class TaskService {
                 description: 'Description 5',
                 type: 'cardWithImageOnLeft',
                 imageUrl: 'img/user-2.svg',
+                steps: [],
             },
             {
                 id: 6,
@@ -54,6 +59,7 @@ export class TaskService {
                 description: 'Description 6',
                 type: 'cardWithImageOnLeft',
                 imageUrl: 'img/sla.svg',
+                steps: [],
             },
             {
                 id: 7,
@@ -62,6 +68,7 @@ export class TaskService {
                 description: 'Description 7',
                 type: 'cardWithImageOnLeft',
                 imageUrl: 'img/star.svg',
+                steps: [],
             },
             {
                 id: 8,
@@ -70,6 +77,7 @@ export class TaskService {
                 description: 'Description 8',
                 type: 'cardWithImageOnLeft',
                 imageUrl: 'img/cloud-sync.svg',
+                steps: [],
             },
             {
                 id: 9,
@@ -78,6 +86,7 @@ export class TaskService {
                 description: 'Description 9',
                 type: 'cardWithImageOnLeft',
                 imageUrl: 'img/telephone-2.svg',
+                steps: [],
             },
             {
                 id: 10,
@@ -86,6 +95,7 @@ export class TaskService {
                 description: 'Description 10',
                 type: 'cardWithImageOnLeft',
                 imageUrl: 'img/user.svg',
+                steps: [],
             },
         ];
     }

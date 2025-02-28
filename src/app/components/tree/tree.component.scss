@@ -1,0 +1,18 @@
+section > div {
+    flex: 1;
+}
+
+.steps {
+    flex-direction: column;
+
+    .step {
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+
+        &:hover {
+            cursor: move;
+            background-color: #eaeaea;
+        }
+    }
+}

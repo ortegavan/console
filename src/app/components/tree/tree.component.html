@@ -44,21 +44,26 @@
                     class="task flex space-between"
                     [attr.data-id]="task.id"
                 >
-                    <div>{{ task.title }}</div>
+                    <div>
+                        <strong>
+                            {{ task.title }}
+                        </strong>
+                        - {{ task.steps.length | i18nPlural: stepMapping }}
+                    </div>
                     @if (task.id == selectedNodeId) {
                         <div class="flex gap-8">
-                            <button
-                                class="btn btn-primary btn-sm"
-                                (click)="editTask(task)"
+                            <dx-button
+                                type="default"
+                                (onClick)="editTask(task)"
                             >
                                 Edit
-                            </button>
-                            <button
-                                class="btn btn-danger btn-sm"
-                                (click)="deleteTask(task)"
+                            </dx-button>
+                            <dx-button
+                                type="danger"
+                                (onClick)="deleteTask(task)"
                             >
                                 Delete
-                            </button>
+                            </dx-button>
                         </div>
                     }
                 </div>

@@ -1,0 +1,37 @@
+<dx-data-grid
+    [dataSource]="things$ | async"
+    keyExpr="id"
+    [rowAlternationEnabled]="true"
+>
+    <dxo-header-filter [visible]="true"></dxo-header-filter>
+
+    <dxi-column dataField="id" caption="ID" width="50"></dxi-column>
+    <dxi-column dataField="name" caption="Name"></dxi-column>
+    <dxi-column dataField="description" caption="Description"></dxi-column>
+    <dxi-column
+        dataField="createdAt"
+        caption="Created At"
+        dataType="date"
+    ></dxi-column>
+    <dxi-column
+        dataField="updatedAt"
+        caption="Updated At"
+        dataType="date"
+    ></dxi-column>
+
+    <dxi-column type="buttons" [buttons]="customButtons"></dxi-column>
+
+    <dxo-search-panel [visible]="true"></dxo-search-panel>
+
+    <dxo-scrolling rowRenderingMode="virtual"> </dxo-scrolling>
+    <dxo-paging [pageSize]="2"> </dxo-paging>
+    <dxo-pager
+        [visible]="true"
+        [allowedPageSizes]="false"
+        [displayMode]="'full'"
+        [showPageSizeSelector]="false"
+        [showInfo]="false"
+        [showNavigationButtons]="true"
+    >
+    </dxo-pager>
+</dx-data-grid>

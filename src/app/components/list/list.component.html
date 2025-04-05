@@ -23,15 +23,6 @@
 
     <dxo-search-panel [visible]="true"></dxo-search-panel>
 
-    <dxo-scrolling rowRenderingMode="virtual"> </dxo-scrolling>
-    <dxo-paging [pageSize]="2"> </dxo-paging>
-    <dxo-pager
-        [visible]="true"
-        [allowedPageSizes]="false"
-        [displayMode]="'full'"
-        [showPageSizeSelector]="false"
-        [showInfo]="false"
-        [showNavigationButtons]="true"
-    >
-    </dxo-pager>
+    <dxo-paging [pageSize]="10"></dxo-paging>
+    <dxo-pager [showNavigationButtons]="true"></dxo-pager>
 </dx-data-grid>
